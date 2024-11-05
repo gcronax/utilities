@@ -1,17 +1,35 @@
 public class Encriptar {
     public static void main(String[] args) {
         String frase =Utilidades.leerCadena("introduce una frase");
+        int n=Utilidades.leerEntero("dame un numero");
         String aux = "";
-        char letra;
+        char letra = 0;
+
         for (int i = 0; i < frase.length(); i++) {
-            letra= ((char) ((int) frase.charAt(i)+2));
-            if (letra=='{'){
-                letra='a';
-            } else if (letra=='|') {
-                letra='b';
+            if (97<=frase.charAt(i)&&122>=frase.charAt(i)){
+                int naux=((int) frase.charAt(i)+n)%(123);
+                if (naux<97){
+                    naux=naux+97;
+                }
+                aux=aux+(char)naux;
             }
-            aux=aux+letra;
+            if (65<=frase.charAt(i)&&90>=frase.charAt(i)){
+                int naux=((int) frase.charAt(i)+n)%(91);
+                if (naux<65){
+                    naux=naux+65;
+                }
+                aux=aux+(char)naux;
+            }
+            if (48<=frase.charAt(i)&&57>=frase.charAt(i)){
+                int naux=((int) frase.charAt(i)+n)%(58);
+                if (naux<48){
+                    naux=naux+48;
+                }
+                aux=aux+(char)naux;
+            }
         }
+
         System.out.println(aux);
+
     }
 }
