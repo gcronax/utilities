@@ -8,6 +8,7 @@ public class Encriptar {
                 count++;
             }
 
+
         }
         if (count>0){
             System.out.println("no es alfabetico");
