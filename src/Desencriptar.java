@@ -12,6 +12,7 @@ public class Desencriptar {
                 }
                 aux=aux+(char)naux;
             }
+
             if (65<=frase.charAt(i)&&90>=frase.charAt(i)){
                 int naux=((int) frase.charAt(i)+n)%(91);
                 if (naux<65){
