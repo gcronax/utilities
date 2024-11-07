@@ -10,6 +10,9 @@ public class Criptografia {
         String aux = "";
 
         for (int i = 0; i < frase.length(); i++) {
+            if (frase.charAt(i)==' '){
+                aux=aux+' ';
+            }
             if (97<=frase.charAt(i)&&122>=frase.charAt(i)){
                 int naux=((int) frase.charAt(i)+n)%(123);
                 if (naux<97){
@@ -39,6 +42,9 @@ public class Criptografia {
         String aux = "";
         n=-n;
         for (int i = 0; i < frase.length(); i++) {
+            if (frase.charAt(i)==' '){
+                aux=aux+' ';
+            }
             if (97<=frase.charAt(i)&&122>=frase.charAt(i)){
                 int naux=((int) frase.charAt(i)+n)%(123);
                 if (naux<97){
